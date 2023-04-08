@@ -1,2 +1,11 @@
+import React from 'react';
 
-//  Footer
+function Footer() {
+    return (
+        <footer className='footer-bottom'>
+            2023 Team Falcon &trade;
+        </footer>
+    );
+}
+
+export default Footer;
