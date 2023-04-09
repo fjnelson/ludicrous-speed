@@ -4,7 +4,7 @@ import { Menu } from 'semantic-ui-react';
 export default function NavTabs({ currentPage, handlePageChange }) {
   return (
 <Menu inverted style={{ display: 'flex', justifyContent: 'space-between' }}>
-  <Menu.Item header>Hello Stranger</Menu.Item>
+  <Menu.Item header>Hello Stranger (image)</Menu.Item>
   <Menu.Menu id='menu-items'>
     <Menu.Item
       name='Home'
