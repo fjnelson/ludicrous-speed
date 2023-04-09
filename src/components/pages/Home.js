@@ -1,2 +1,7 @@
+import React from 'react';
 
-// Home
+export default function Home() {
+    return (
+      <p style={{ color: "yellow" }}>placeholder</p>
+    );
+  }

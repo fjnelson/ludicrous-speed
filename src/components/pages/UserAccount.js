@@ -1,2 +1,7 @@
+import React from 'react';
 
-// UserAccount
+export default function Home() {
+    return (
+      <p style={{ color: "blue" }}>placeholder</p>
+    );
+  }
