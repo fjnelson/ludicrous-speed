@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import { Container } from 'semantic-ui-react';
+import Footer from "./components/Footer";
+import Main from "./components/Main";
+import { loadStripe } from '@stripe/stripe-js';
+import { Elements } from '@stripe/react-stripe-js';
+
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('Home');
+
+  const handlePageChange = (page) => {
+    console.log("Changing page to:", page);
+    setCurrentPage(page);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Elements stripe={stripePromise}>
+        <Main currentPage={currentPage} handlePageChange={handlePageChange} />
+        <Footer />
+      </Elements>
     </div>
   );
 }
