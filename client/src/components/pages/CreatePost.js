@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'semantic-ui-react';
+import { useNavigate } from 'react-router-dom';
 
 export default function CreatePost() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [content, setContent] = useState('');
+  const navigate = useNavigate();
 
   const handleTitleChange = (event) => setTitle(event.target.value);
   const handleDescriptionChange = (event) => setDescription(event.target.value);
@@ -16,6 +18,8 @@ export default function CreatePost() {
     console.log('Description:', description);
     console.log('Content:', content);
     // Add your code to submit the form data to the server here
+    // After the data is submitted, navigate to the home page
+    navigate('/');
   };
 
   return (
