@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function UserAccount(props) {
   const { name, postHistory } = props;
@@ -12,6 +13,7 @@ export default function UserAccount(props) {
           <li key={index}>{post}</li>
         ))} */}
       </ul>
+      <Link to="/">Go back to home page</Link>
     </div>
   );
 }
