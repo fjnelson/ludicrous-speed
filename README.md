@@ -1,3 +1,5 @@
+# HELLO STRANGER
+![portfolio ace](./images/hellostranger-04.jpg "screenshot of main page of the application")
 # Group Project #3
 
 ![License Badge](https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=for-the-badge)
@@ -6,7 +8,10 @@
 ![License Badge](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![License Badge](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 
-  <h1><a href="https://hello-stranger.herokuapp.com/">Click here to be taken to the Heroku app</a></h1>
+## Deployed App
+
+- [X] ADD DEPLOYED APP LINK  
+
 
 ## Table of Contents (Optional)
 
@@ -34,7 +39,7 @@ Github pages: https://fjnelson.github.io/ludicrous-speed/
 
 ## Screenshot
 
-![portfolio ace](./src/components/images/hello.JPG "screenshot of main page of the application")
+![portfolio ace](./images/hellostranger-04.jpg "screenshot of main page of the application")
 
 ## Installing & Setup
 
@@ -47,11 +52,9 @@ $ npm start
 
 ## License
 
-![License Badge](https://img.shields.io/badge/license%20-ISC-red)
+![License Badge](https://img.shields.io/badge/license%20-ISC-red) 
 
-ISC License
-
-Copyright (c) 2023 Project Eagle
+ISC License, Copyright (c) 2023 Project Eagle
 
 Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
 
