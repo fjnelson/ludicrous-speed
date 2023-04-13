@@ -1,23 +1,17 @@
 import React from "react";
-import { Header, Icon } from "semantic-ui-react";
+// import { Header } from "semantic-ui-react";
+import HelloStranger from "../images/hellostranger-04.jpg";
 
 const HeaderExampleSettingsIcon = () => (
-  <div style={{ height: "100vh" }}>
-    <Header as="h2" icon>
-      <Icon name="settings" />
-      Hello Stranger!
-      <Header.Subheader>
-        Breaking down barriers, one story at a time.
-      </Header.Subheader>
-    </Header>
+  <div
+    style={{
+      height: "100vh",
+      backgroundImage: `url(${HelloStranger})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}
+    >
   </div>
 );
 
 export default HeaderExampleSettingsIcon;
-
-<h2 class="ui icon header">
-  <i aria-hidden="true" class="settings icon"></i>Account Settings
-  <div class="sub header">
-    Manage your account settings and set e-mail preferences.
-  </div>
-</h2>;
