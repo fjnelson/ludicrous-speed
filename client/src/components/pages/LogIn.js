@@ -3,7 +3,7 @@ import { useMutation } from '@apollo/client';
 import { Button, Form, Grid, Header, Segment } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { LOGIN } from '../../utils/mutations';
-import Auth from '../../utils/auth';
+import AuthService from '../../utils/auth';
 export default function LogIn() {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error }] = useMutation(LOGIN);
@@ -15,7 +15,7 @@ export default function LogIn() {
         variables: { email: formState.email, password: formState.password },
       });
       const token = mutationResponse.data.login.token;
-      Auth.login(token);
+      AuthService.login(token);
     } catch (e) {
       console.log(error);
     }
