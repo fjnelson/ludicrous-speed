@@ -4,12 +4,12 @@
 
 # Group Project #3
 
-Team Members
-Helen Evans - https://github.com/HelenLEvans
-John Nelson - https://github.com/fjnelson
-Chris Ridder - https://github.com/cridder
-Davis Genthner - 
-AP - 
+- Team Members:
+  - Helen Evans - https://github.com/HelenLEvans
+  - John Nelson - https://github.com/fjnelson
+  - Chris Ridder - https://github.com/cridder
+  - Davis Genthner - 
+  - AP - 
 
 
 ![License Badge](https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=for-the-badge)
