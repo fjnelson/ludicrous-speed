@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/ludicrous-speed/static/css/main.073c9b0a.css",
+    "main.js": "/ludicrous-speed/static/js/main.e679cf12.js",
+    "static/js/787.afb2bc80.chunk.js": "/ludicrous-speed/static/js/787.afb2bc80.chunk.js",
+    "static/media/logo.svg": "/ludicrous-speed/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/ludicrous-speed/index.html",
+    "main.073c9b0a.css.map": "/ludicrous-speed/static/css/main.073c9b0a.css.map",
+    "main.e679cf12.js.map": "/ludicrous-speed/static/js/main.e679cf12.js.map",
+    "787.afb2bc80.chunk.js.map": "/ludicrous-speed/static/js/787.afb2bc80.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.e679cf12.js"
+  ]
+}
