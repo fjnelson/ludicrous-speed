@@ -11,7 +11,7 @@ import Auth from "../../utils/auth";
 
 const Signup = () => {
 	const [formState, setFormState] = useState({
-		name: "",
+
 		email: "",
 		password: "",
 	});
@@ -39,7 +39,7 @@ const Signup = () => {
 
 			Auth.login(data.addProfile.token);
 		} catch (e) {
-			console.error(e);
+			console.error(error);
 		}
 	};
 
