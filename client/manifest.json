@@ -1,0 +1,10 @@
+{
+    "short_name": "Manifest",
+    "name" : "Hello Stranger Manifest",
+    "icons": [{
+        "src": "./images/hellostranger-04.jpg",
+        "type" : "image/jpeg",
+        "sizes" : "96x96"
+    }
+    ]
+}
