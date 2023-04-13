@@ -1,6 +1,16 @@
 # HELLO STRANGER
+
 ![portfolio ace](./images/hellostranger-04.jpg "screenshot of main page of the application")
+
 # Group Project #3
+
+Team Members
+Helen Evans - https://github.com/HelenLEvans
+John Nelson - https://github.com/fjnelson
+Chris Ridder - https://github.com/cridder
+Davis Genthner - 
+AP - 
+
 
 ![License Badge](https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=for-the-badge)
 ![License Badge](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
@@ -10,8 +20,11 @@
 
 ## Deployed App
 
-- [X] ADD DEPLOYED APP LINK  
+- [x] ADD DEPLOYED APP LINK
 
+## Repository
+
+https://github.com/fjnelson/ludicrous-speed 
 
 ## Table of Contents (Optional)
 
@@ -52,7 +65,7 @@ $ npm start
 
 ## License
 
-![License Badge](https://img.shields.io/badge/license%20-ISC-red) 
+![License Badge](https://img.shields.io/badge/license%20-ISC-red)
 
 ISC License, Copyright (c) 2023 Project Eagle
 
