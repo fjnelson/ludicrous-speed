@@ -2,13 +2,15 @@ import React from "react";
 import { Header, Icon } from "semantic-ui-react";
 
 const HeaderExampleSettingsIcon = () => (
-  <Header as="h2" icon>
-    <Icon name="settings" />
-    Hello Stranger!
-    <Header.Subheader>
-      Breaking down barriers, one story at a time.
-    </Header.Subheader>
-  </Header>
+  <div style={{ height: "100vh" }}>
+    <Header as="h2" icon>
+      <Icon name="settings" />
+      Hello Stranger!
+      <Header.Subheader>
+        Breaking down barriers, one story at a time.
+      </Header.Subheader>
+    </Header>
+  </div>
 );
 
 export default HeaderExampleSettingsIcon;
