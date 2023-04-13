@@ -1,4 +1,4 @@
-const { gql } = require('apollo-server-express');
+const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
   type Post {
@@ -32,7 +32,7 @@ const typeDefs = gql`
 
   type Mutation {
     addPost(postText: String!, postAuthor: String!): Post
-    addComment(postId: ID!, commentText: String!): Post
+    addComment(postId: ID!, commentText: String!, username: String!): Post
     removePost(postId: ID!): Post
     removeComment(postId: ID!, commentId: ID!): Post
   }
