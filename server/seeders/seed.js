@@ -1,3 +1,4 @@
+
 const db = require('../config/connection');
 const { Post, User } = require('../models');
 const postSeeds = require('./postSeeds.json');
@@ -16,7 +17,3 @@ db.once('open', async () => {
     throw err;
   }
 });
-
-
-
-
