@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ludicrous-speed/static/css/main.37d0bf31.css",
+    "main.js": "/ludicrous-speed/static/js/main.74d956de.js",
+    "static/js/787.afb2bc80.chunk.js": "/ludicrous-speed/static/js/787.afb2bc80.chunk.js",
+    "index.html": "/ludicrous-speed/index.html",
+    "main.37d0bf31.css.map": "/ludicrous-speed/static/css/main.37d0bf31.css.map",
+    "main.74d956de.js.map": "/ludicrous-speed/static/js/main.74d956de.js.map",
+    "787.afb2bc80.chunk.js.map": "/ludicrous-speed/static/js/787.afb2bc80.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.37d0bf31.css",
+    "static/js/main.74d956de.js"
+  ]
+}
