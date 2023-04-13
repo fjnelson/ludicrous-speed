@@ -1,6 +1,3 @@
-// cridder 20230411210728
-// 
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -11,7 +8,7 @@ import Auth from "../../utils/auth";
 
 const Signup = () => {
 	const [formState, setFormState] = useState({
-		name: "",
+
 		email: "",
 		password: "",
 	});
@@ -39,7 +36,7 @@ const Signup = () => {
 
 			Auth.login(data.addProfile.token);
 		} catch (e) {
-			console.error(e);
+			console.error(error);
 		}
 	};
 

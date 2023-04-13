@@ -1,24 +1,32 @@
 import React, { useState } from "react";
+import { useMutation } from '@apollo/client';
 import { Button, Form, Grid, Header, Segment } from "semantic-ui-react";
 import { Link } from "react-router-dom";
-
+import { LOGIN } from '../../utils/mutations';
+import Auth from '../../utils/auth';
 export default function LogIn() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [login, { error }] = useMutation(LOGIN);
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const mutationResponse = await login({
+        variables: { email: formState.email, password: formState.password },
+      });
+      const token = mutationResponse.data.login.token;
+      Auth.login(token);
+    } catch (e) {
+      console.log(error);
+    }
   };
 
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // do something with the email and password, e.g. send it to the server
-    console.log("email:", email);
-    console.log("password:", password);
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
   };
 
   return (
@@ -27,15 +35,14 @@ export default function LogIn() {
         <Header as="h1" color="orange" textAlign="center">
           Log-in to your account
         </Header>
-        <Form size="large" onSubmit={handleSubmit}>
+        <Form size="large" onSubmit={handleFormSubmit}>
           <Segment stacked>
             <Form.Input
               fluid
               icon="user"
               iconPosition="left"
               placeholder="E-mail address"
-              value={email}
-              onChange={handleEmailChange}
+              onChange={handleChange}
             />
             <Form.Input
               fluid
@@ -43,8 +50,7 @@ export default function LogIn() {
               iconPosition="left"
               placeholder="Password"
               type="password"
-              value={password}
-              onChange={handlePasswordChange}
+              onChange={handleChange}
             />
 
             <Button
@@ -62,7 +68,7 @@ export default function LogIn() {
             style={{ backgroundColor: "orange", color: "white" }}
             size="large"
           >
-            <Link to="/new-account" style={{ color: "white" }}>
+            <Link to="/signup" style={{ color: "white" }}>
               Sign Up
             </Link>
           </Button>
