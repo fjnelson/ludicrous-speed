@@ -16,7 +16,7 @@
 
 # Team
 
-- Team Members:
+- Project Eagle Team Members:
   - John Nelson - https://github.com/fjnelson
   - AP - https://github.com/aashpaash
   - Helen Evans - https://github.com/HelenLEvans
@@ -57,11 +57,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Repository
 
-[HELLO STRANGER](https://github.com/fjnelson/ludicrous-speed)
+[HELLO STRANGER][1]
 
 # Contributing
 
-Fork [HELLO STRANGER](https://github.com/fjnelson/ludicrous-speed) and submit a pull request.
+Fork [HELLO STRANGER][1] and submit a pull request.
 
 # Description
 
@@ -85,3 +85,5 @@ Permission to use, copy, modify, and/or distribute this software for any purpose
 THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 # END
+
+[1]: (https://github.com/fjnelson/ludicrous-speed)
