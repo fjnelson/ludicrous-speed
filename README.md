@@ -76,9 +76,11 @@ Codebase correction that follows accessibility standards so that the site is opt
 
 # License
 
-![License Badge](https://img.shields.io/badge/license%20-ISC-red)
+![License Badge](https://img.shields.io/badge/license%20-ISC-orange)
 
-ISC License, Copyright (c) 2023 Project Eagle
+ISC License
+
+Copyright (c) 2023
 
 Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
 
