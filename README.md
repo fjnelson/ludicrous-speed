@@ -65,9 +65,7 @@ Fork repository and submit a pull request.
 
 # Description
 
-Bootcamp: Project #3 <br />
-React Challenge: MERN application <br />
-Codebase correction that follows accessibility standards so that the site is optimized for search engines <br />
+- [ ] ADD A DESCRIPTION
 
 # Screenshot
 
