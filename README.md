@@ -1,6 +1,6 @@
 # HELLO STRANGER
 
-![portfolio ace](./client/src/components/images/hellostranger-04.jpg "screenshot of main page of the application")
+![HELLO STRANGER](./client/src/components/images/hellostranger-04.jpg "screenshot of main page of the application")
 
 # Table of contents
 
