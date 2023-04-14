@@ -1,15 +1,26 @@
 import React from "react";
 import { Menu } from "semantic-ui-react";
 import { Link, useLocation } from "react-router-dom";
-
+import HandYellow from "./images/Hand-yellow.png";
 
 export default function NavTabs() {
   const location = useLocation();
   console.log(location);
 
   return (
-    <Menu inverted style={{ display: "flex", justifyContent: "space-between" }}>
-      <Menu.Item header>Hello Stranger (image)</Menu.Item>
+    <Menu
+      inverted
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        backgroundColor: "#255f85",
+        maxHeight: "100px",
+        padding: "2rem",
+      }}
+    >
+      <Menu.Item header>
+      <img src={HandYellow} alt="Hello Stranger" />
+      </Menu.Item>
       <Menu.Menu id="menu-items">
         <Menu.Item
           as={Link}

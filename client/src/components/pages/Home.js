@@ -1,10 +1,17 @@
-import React from 'react';
+import React from "react";
+// import { Header } from "semantic-ui-react";
+import HelloStranger from "../images/hellostranger-04.jpg";
 
-export default function Home() {
-  return (
-    <div style={{ height: '100vh' }}>
-      <h1 style={{ fontSize: '10em' }}>HELLO STRANGER</h1>
-      <p style={{ fontSize: '2em', color: 'gray' }}>Meet Someone New (or whatever slogan here)</p>
-    </div>
-  );
-}
+const HeaderExampleSettingsIcon = () => (
+  <div
+    style={{
+      height: "100vh",
+      backgroundImage: `url(${HelloStranger})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}
+    >
+  </div>
+);
+
+export default HeaderExampleSettingsIcon;
