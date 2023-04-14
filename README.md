@@ -1,6 +1,6 @@
 # HELLO STRANGER
 
-![portfolio ace](./images/hellostranger-04.jpg "screenshot of main page of the application")
+![portfolio ace](./client/src/components/images/hellostranger-04.jpg "screenshot of main page of the application")
 
 # Group Project #3
 
@@ -52,7 +52,7 @@ Github pages: https://fjnelson.github.io/ludicrous-speed/
 
 ## Screenshot
 
-![portfolio ace](./images/hellostranger-04.jpg "screenshot of main page of the application")
+![portfolio ace](./client/src/components/images/hellostranger-04.jpg "screenshot of main page of the application")
 
 ## Installing & Setup
 
