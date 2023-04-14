@@ -30,7 +30,7 @@
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "seed": "cd server && npm run seed",
-    "build": "cd client && npm run build && mv build ../client/public"
+    "build": "cd client && npm run build"
   },
   "engines": {
     "node": "16.x"
