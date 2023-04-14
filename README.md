@@ -1,9 +1,19 @@
 # HELLO STRANGER
-
 ![portfolio ace](./client/src/components/images/hellostranger-04.jpg "screenshot of main page of the application")
 
-# Group Project #3
+## Table of Contents
+- [Title](#hello-stranger)
+- [Team](#team)
+- [Technology](#technology)
 
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [License](#License)
+- [Contributing](#Contributing)
+- [Tests](#Tests)
+- [Questions](#Questions)
+
+## Team
 - Team Members:
   - Helen Evans - https://github.com/HelenLEvans
   - John Nelson - https://github.com/fjnelson
@@ -11,12 +21,21 @@
   - Davis Genthner - 
   - AP - 
 
-
+## Technology
 ![License Badge](https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=for-the-badge)
 ![License Badge](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
 ![License Badge](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
 ![License Badge](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![License Badge](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![License Badge](https://img.shields.io/badge/-NPM-orange)
+![License Badge](https://img.shields.io/badge/-MERN-orange)
+![License Badge](https://img.shields.io/badge/-STRIPE-orange)
+![License Badge](https://img.shields.io/badge/-SEMANTIC-orange)
+![License Badge](https://img.shields.io/badge/-BCRYPT-orange)
+![License Badge](https://img.shields.io/badge/-EXPRESS-orange)
+![License Badge](https://img.shields.io/badge/-GRAPHQL-orange)
+![License Badge](https://img.shields.io/badge/-JSONWEBTOKEN-orange)
+![License Badge](https://img.shields.io/badge/-MONGOOSE-orange)
 
 ## Deployed App
 
@@ -35,7 +54,7 @@ https://github.com/fjnelson/ludicrous-speed
 - [Installation](#Installing)
 - [License](#License)
 
-# Application
+## Application
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
