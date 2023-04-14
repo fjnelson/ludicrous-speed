@@ -12,7 +12,7 @@ const Signup = () => {
 		email: "",
 		password: "",
 	});
-	const [addProfile, { error, data }] = useMutation(ADD_PROFILE);
+	const [addUser, { error, data }] = useMutation(ADD_PROFILE);
 
 	// update state based on form input changes
 	const handleChange = (event) => {
@@ -21,7 +21,10 @@ const Signup = () => {
 		setFormState({
 			...formState,
 			[name]: value,
+			
 		});
+		console.log(formState);
+
 	};
 
 	// submit form
@@ -30,13 +33,13 @@ const Signup = () => {
 		console.log(formState);
 
 		try {
-			const { data } = await addProfile({
+			const { data } = await addUser({
 				variables: { ...formState },
 			});
 
-			Auth.login(data.addProfile.token);
+			Auth.login(data.addUser.token);
 		} catch (e) {
-			console.error(error);
+			console.error(e);
 		}
 	};
 
@@ -56,9 +59,9 @@ const Signup = () => {
 								<input
 									className="form-input"
 									placeholder="Your username"
-									name="name"
+									name="username"
 									type="text"
-									value={formState.name}
+									value={formState.username}
 									onChange={handleChange}
 								/>
 								<input

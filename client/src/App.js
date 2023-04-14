@@ -22,7 +22,7 @@ import LogIn from "./components/pages/LogIn";
 import NavTabs from "./components/NavTabs";
 import Signup from "./components/pages/Signup";
 
-const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
+// const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 
 
 const httpLink = createHttpLink({
@@ -55,7 +55,7 @@ function App() {
 
   return (
     <ApolloProvider client={client}>
-      <Elements stripe={stripePromise}>
+      {/* <Elements stripe={stripePromise}> */}
         <BrowserRouter>
           <NavTabs
             currentPage={currentPage}
@@ -78,7 +78,7 @@ function App() {
           </Routes>
         </BrowserRouter>
         <Footer />
-      </Elements>
+      {/* </Elements> */}
     </ApolloProvider>
   );
 }

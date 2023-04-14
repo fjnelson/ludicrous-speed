@@ -41,15 +41,19 @@ export default function LogIn() {
               fluid
               icon="user"
               iconPosition="left"
+              name="email"
               placeholder="E-mail address"
+              type="email"
               onChange={handleChange}
             />
             <Form.Input
               fluid
               icon="lock"
               iconPosition="left"
-              placeholder="Password"
               type="password"
+              name="password"
+
+              placeholder="password"
               onChange={handleChange}
             />
 
