@@ -1,7 +1,6 @@
 import React from "react";
 import { Grid, Button } from "semantic-ui-react";
 import hellostranger4 from "../images/hellostranger-04.jpg";
-import "./Home.css";
 
 export default function Home() {
   return (
