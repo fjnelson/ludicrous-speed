@@ -51,17 +51,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ![License Badge](https://img.shields.io/badge/-JSONWEBTOKEN-orange)
 ![License Badge](https://img.shields.io/badge/-MONGOOSE-orange)
 
-# Deployed App 
+# Deployed App
 
 - [ ] ADD DEPLOYED APP LINK
 
 # Repository
 
-https://github.com/fjnelson/ludicrous-speed
+[HELLO STRANGER](https://github.com/fjnelson/ludicrous-speed)
 
 # Contributing
 
-Fork repository and submit a pull request.
+Fork [HELLO STRANGER](https://github.com/fjnelson/ludicrous-speed) and submit a pull request.
 
 # Description
 
