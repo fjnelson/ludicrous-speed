@@ -77,7 +77,7 @@ function App() {
             />
           </Routes>
         </BrowserRouter>
-        <Footer />
+        <Footer stripePromise={stripePromise} />
       </Elements>
     </ApolloProvider>
   );
