@@ -32,6 +32,9 @@
     "seed": "cd server && npm run seed",
     "build": "cd client && npm run build && mv build ../client/public"
   },
+  "engines": {
+    "node": "16.x"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
