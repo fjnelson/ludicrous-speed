@@ -7,6 +7,7 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
+
 // import { Container } from 'semantic-ui-react';
 import Footer from "./components/Footer";
 import Main from "./components/Main";
@@ -53,10 +54,30 @@ function App() {
   };
 
 
+
   return (
     <ApolloProvider client={client}>
       {/* <Elements stripe={stripePromise}> */}
         <BrowserRouter>
+          <NavTabs
+            currentPage={currentPage}
+            handlePageChange={handlePageChange}
+          />
+          <Routes>
+            <Route path="/create" element={<CreatePost />} />
+            <Route path="/account" element={<UserAccount />} />
+            <Route path="/login" element={<LogIn />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route
+              path="/"
+              element={
+                <Main
+                  currentPage={currentPage}
+                  handlePageChange={handlePageChange}
+                />
+              }
+            />
+          </Routes>
           <NavTabs
             currentPage={currentPage}
             handlePageChange={handlePageChange}

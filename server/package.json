@@ -1,12 +1,12 @@
 {
-  "name": "mern-server",
+  "name": "ludicrious-speed",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "watch": "nodemon",
-    "seed": "node seeders/seed.js"
+    "seed": "node config/seeds.js"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +22,6 @@
 
   },
   "devDependencies": {
-    "nodemon": "^2.0.3"
+    "nodemon": "^2.0.2"
   }
 }

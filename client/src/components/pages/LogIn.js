@@ -8,6 +8,7 @@ export default function LogIn() {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error }] = useMutation(LOGIN);
 
+
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -66,10 +67,14 @@ export default function LogIn() {
             </Button>
           </Segment>
         </Form>
-        <p style={{ marginTop: "1em" }}>
+        <p style={{ marginTop: "2em" }}>
           Don't have an account yet?
           <Button
-            style={{ backgroundColor: "orange", color: "white" }}
+            style={{
+              backgroundColor: "orange",
+              color: "white",
+              marginLeft: "1em",
+            }}
             size="large"
           >
             <Link to="/signup" style={{ color: "white" }}>

@@ -69,6 +69,7 @@ const resolvers = {
       );
       return post;
     },
+
   },
   Post: {
     comments: (parent) => parent.comments.sort((a, b) => b.createdAt.localeCompare(a.createdAt)),

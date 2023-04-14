@@ -1,11 +1,13 @@
-import React from 'react';
-import { Container } from 'semantic-ui-react';
-import { Route, Routes } from 'react-router-dom';
+import React from "react";
+import { Container } from "semantic-ui-react";
+import { Route, Routes } from "react-router-dom";
+
 // import NavTabs from './NavTabs';
-import Home from './pages/Home';
-import CreatePost from './pages/CreatePost';
-import UserAccount from './pages/UserAccount';
-import LogIn from './pages/LogIn';
+import Home from "./pages/Home";
+import CreatePost from "./pages/CreatePost";
+import UserAccount from "./pages/UserAccount";
+import LogIn from "./pages/LogIn";
+import Signup from './pages/Signup';
 
 function Main({ currentPage, handlePageChange }) {
   return (
@@ -17,6 +19,7 @@ function Main({ currentPage, handlePageChange }) {
           <Route path="/create" element={<CreatePost />} />
           <Route path="/user-account" element={<UserAccount />} />
           <Route path="/login" element={<LogIn />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </Container>
     </div>
@@ -24,3 +27,4 @@ function Main({ currentPage, handlePageChange }) {
 }
 
 export default Main;
+
