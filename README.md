@@ -20,7 +20,7 @@
   - John Nelson - https://github.com/fjnelson
   - AP - https://github.com/aashpaash
   - Helen Evans - https://github.com/HelenLEvans
-  - Peter - https://github.com/poprit77
+  - Peter Ataras - https://github.com/poprit77
   - Davis Genthner - https://github.com/TheTrueGameBreaker
   - Chris Ridder - https://github.com/cridder
 
