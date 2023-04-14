@@ -23,7 +23,7 @@ import LogIn from "./components/pages/LogIn";
 import NavTabs from "./components/NavTabs";
 import Signup from "./components/pages/Signup";
 
-// const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 
 
 const httpLink = createHttpLink({
@@ -53,31 +53,10 @@ function App() {
     setCurrentPage(page);
   };
 
-
-
   return (
     <ApolloProvider client={client}>
-      {/* <Elements stripe={stripePromise}> */}
+      <Elements stripe={stripePromise}>
         <BrowserRouter>
-          <NavTabs
-            currentPage={currentPage}
-            handlePageChange={handlePageChange}
-          />
-          <Routes>
-            <Route path="/create" element={<CreatePost />} />
-            <Route path="/account" element={<UserAccount />} />
-            <Route path="/login" element={<LogIn />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route
-              path="/"
-              element={
-                <Main
-                  currentPage={currentPage}
-                  handlePageChange={handlePageChange}
-                />
-              }
-            />
-          </Routes>
           <NavTabs
             currentPage={currentPage}
             handlePageChange={handlePageChange}
@@ -99,7 +78,7 @@ function App() {
           </Routes>
         </BrowserRouter>
         <Footer />
-      {/* </Elements> */}
+      </Elements>
     </ApolloProvider>
   );
 }
