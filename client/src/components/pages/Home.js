@@ -5,9 +5,9 @@ import hellostranger4 from "../images/hellostranger-04.jpg";
 export default function Home() {
   return (
     <body style={{ backgroundColor: "#25495f" }}>
-      //<div style={{ height: "100vh"}}>
+      <div style={{ height: "100vh"}}>
         <div>
-          <img src={hellostranger4} className="picture" />
+        <img src={hellostranger4} className="picture" alt="hello stranger" />
           <p style={{ fontSize: "2em", color: "#FFC857", textAlign: "center" }}>
             “If you see someone without a smile, give them one of yours.” -
             Dolly Parton - Helen Evans
@@ -31,7 +31,7 @@ export default function Home() {
             </Grid.Column>
           </Grid.Row>
         </Grid>
-      //</div>
-    //</body>
+      </div>
+    </body>
   );
 }
