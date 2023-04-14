@@ -1,10 +1,21 @@
 {
     "short_name": "Manifest",
     "name" : "Hello Stranger Manifest",
+    "description" : "Codebase correction that follows accessibility standards so that the site is optimized for search engines",
     "icons": [{
         "src": "./images/hellostranger-04.jpg",
         "type" : "image/jpeg",
         "sizes" : "96x96"
     }
-    ]
+    ],
+    "start.url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+  "theme_color": "#2196f3",
+    "permissions": [
+        "geolocation",
+        "notifications",
+        "camera",
+        "microphone"
+      ]
 }
