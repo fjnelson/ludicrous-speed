@@ -1,6 +1,9 @@
 import React from "react";
 import { Container } from "semantic-ui-react";
 import { Route, Routes } from "react-router-dom";
+import React from "react";
+import { Container } from "semantic-ui-react";
+import { Route, Routes } from "react-router-dom";
 // import NavTabs from './NavTabs';
 import Home from "./pages/Home";
 import CreatePost from "./pages/CreatePost";
@@ -26,3 +29,4 @@ function Main({ currentPage, handlePageChange }) {
 }
 
 export default Main;
+
