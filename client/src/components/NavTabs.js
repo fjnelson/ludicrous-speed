@@ -2,11 +2,35 @@ import React from "react";
 import { Menu } from "semantic-ui-react";
 import { Link, useLocation } from "react-router-dom";
 import HandYellow from "./images/Hand-yellow.png";
+import Auth from "../utils/auth";
 import "../App.css";
 
 export default function NavTabs() {
   const location = useLocation();
   console.log(location);
+
+  function showNavigation() {
+    if (Auth.loggedIn()) {
+      return (
+        <ul className="flex-row">
+  
+            {/* this is not using the Link component to logout or user and then refresh the application to the start */}
+            <a href="/" onClick={() => Auth.logout()}>
+              Logout
+            </a>
+
+        </ul>
+      );
+    } else {
+      return (
+        <ul className="flex-row">
+
+            <Link to="/login">Login</Link>
+
+        </ul>
+      );
+    }
+  }
 
   return (
     <Menu
@@ -38,7 +62,7 @@ export default function NavTabs() {
         <Menu.Item
           as={Link}
           to="/account"
-          name="User Accounts"
+          name="Explore"
           active={location.pathname === "/account"}
         />
         <Menu.Item
