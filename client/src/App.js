@@ -94,11 +94,9 @@ function App() {
           .catch (err => {
             // if the registration is unsuccessful
             console.log('SW Reg:', err);
-          })      
-      }
-   }
-  } 
-
+        });
+    });
+  }
 };
 
 export default App;
