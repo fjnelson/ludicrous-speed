@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
 export default function Home() {
-  const [showNav, setShowNav] = useState(false);
+  const [setShowNav] = useState(false);
   return (
     <body style={{ backgroundColor: "#25495f" }}>
       <div style={{ height: "100vh" }}>
@@ -13,7 +13,7 @@ export default function Home() {
           <img
             class="ui centered large image"
             src={hellostranger4}
-            alt="My Image"
+            alt="Hello Stranger"
           />
           <p style={{ fontSize: "2em", color: "#FFC857", textAlign: "center" }}>
             “If you see someone without a smile, give them one of yours.” -
@@ -53,9 +53,7 @@ export default function Home() {
             </Grid.Column>
           </Grid.Row>
         </Grid>
-        //
       </div>
-      //
     </body>
   );
 }
