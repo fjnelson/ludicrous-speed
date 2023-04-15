@@ -1,7 +1,12 @@
 {
   "files": {
+<<<<<<< HEAD
     "main.css": "/static/css/main.0905991c.css",
     "main.js": "/static/js/main.39aca8e0.js",
+=======
+    "main.css": "/static/css/main.0647a44d.css",
+    "main.js": "/static/js/main.f69842ec.js",
+>>>>>>> main
     "static/js/787.afb2bc80.chunk.js": "/static/js/787.afb2bc80.chunk.js",
     "static/media/hellostranger-04.jpg": "/static/media/hellostranger-04.97959dae923260b55f3c.jpg",
     "static/media/Hand-yellow.png": "/static/media/Hand-yellow.5d676cc4941883cdff4b.png",
@@ -10,6 +15,7 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
+<<<<<<< HEAD
     "main.0905991c.css.map": "/static/css/main.0905991c.css.map",
     "main.39aca8e0.js.map": "/static/js/main.39aca8e0.js.map",
     "787.afb2bc80.chunk.js.map": "/static/js/787.afb2bc80.chunk.js.map"
@@ -17,5 +23,14 @@
   "entrypoints": [
     "static/css/main.0905991c.css",
     "static/js/main.39aca8e0.js"
+=======
+    "main.0647a44d.css.map": "/static/css/main.0647a44d.css.map",
+    "main.f69842ec.js.map": "/static/js/main.f69842ec.js.map",
+    "787.afb2bc80.chunk.js.map": "/static/js/787.afb2bc80.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0647a44d.css",
+    "static/js/main.f69842ec.js"
+>>>>>>> main
   ]
 }

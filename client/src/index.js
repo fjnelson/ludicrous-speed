@@ -5,6 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import "semantic-ui-css/semantic.min.css"
+import './App.css'
 import * as registerServiceWorker from './register-service-worker';
 
 const styleLink = document.createElement("link");

@@ -22,6 +22,7 @@ import UserAccount from "./components/pages/UserAccount";
 import LogIn from "./components/pages/LogIn";
 import NavTabs from "./components/NavTabs";
 import Signup from "./components/pages/Signup";
+import AP from "./components/pages/AnonymousPost";
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 
@@ -64,6 +65,7 @@ function App() {
           <Routes>
             <Route path="/create" element={<CreatePost />} />
             <Route path="/account" element={<UserAccount />} />
+            <Route path="/AnonymousPost" element={<AP />} />
             <Route path="/login" element={<LogIn />} />
             <Route path="/signup" element={<Signup />} />
             <Route
@@ -100,3 +102,4 @@ function App() {
 };
 
 export default App;
+
