@@ -29,7 +29,17 @@ module.exports = () => {
 
         })
         
-        ],
+        ]
+   //     module: {
+    //        rules: [
+   //             {
+    //                use:{
+   //                    loader: 'babel-loader',
+    //                    options: {
+   //                         presents: ['@babel/preset-env']
+    //                }},
+    //        ]   }
+    //    }
 
     }
 };
