@@ -94,10 +94,8 @@ function App() {
             console.log('SW Reg:', err);
           })      
       }
-  //  }
-  // }
-  
-  
+   }
+  } 
 
 };
 
