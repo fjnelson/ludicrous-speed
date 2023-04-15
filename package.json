@@ -2,7 +2,10 @@
   "name": "ludicrous-speed",
   "version": "0.1.0",
   "private": true,
-  "main": "server/server.js",
+  "engines": {
+    "node": "16.x"
+  },
+  "homepage": "./",
   "dependencies": {
     "@apollo/client": "^3.7.11",
     "@emotion/react": "^11.10.6",
@@ -31,18 +34,12 @@
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "seed": "cd server && npm run seed",
-    "build": "cd client && npm run build"
+    "build": "cd client && npm run build && mv build ../client/public"
   },
-  "engines": {
-    "node": "16.x"
-},
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.1.0"
-  },
-  "dependencies": {
-    "body-parser": "^1.20.2"
   }
 }
