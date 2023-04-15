@@ -1,24 +1,33 @@
 import React, { useState } from "react";
+import { useMutation } from '@apollo/client';
 import { Button, Form, Grid, Header, Segment } from "semantic-ui-react";
 import { Link } from "react-router-dom";
-
+import { LOGIN } from '../../utils/mutations';
+import AuthService from '../../utils/auth';
 export default function LogIn() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [login, { error }] = useMutation(LOGIN);
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const mutationResponse = await login({
+        variables: { email: formState.email, password: formState.password },
+      });
+      const token = mutationResponse.data.login.token;
+      AuthService.login(token);
+    } catch (e) {
+      console.log(error);
+    }
   };
 
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // do something with the email and password, e.g. send it to the server
-    console.log("email:", email);
-    console.log("password:", password);
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
   };
 
   return (
@@ -27,24 +36,26 @@ export default function LogIn() {
         <Header as="h1" color="orange" textAlign="center">
           Log-in to your account
         </Header>
-        <Form size="large" onSubmit={handleSubmit}>
+        <Form size="large" onSubmit={handleFormSubmit}>
           <Segment stacked>
             <Form.Input
               fluid
               icon="user"
               iconPosition="left"
+              name="email"
               placeholder="E-mail address"
-              value={email}
-              onChange={handleEmailChange}
+              type="email"
+              onChange={handleChange}
             />
             <Form.Input
               fluid
               icon="lock"
               iconPosition="left"
-              placeholder="Password"
               type="password"
-              value={password}
-              onChange={handlePasswordChange}
+              name="password"
+
+              placeholder="password"
+              onChange={handleChange}
             />
 
             <Button
@@ -56,13 +67,17 @@ export default function LogIn() {
             </Button>
           </Segment>
         </Form>
-        <p style={{ marginTop: "1em" }}>
+        <p style={{ marginTop: "2em" }}>
           Don't have an account yet?
           <Button
-            style={{ backgroundColor: "orange", color: "white" }}
+            style={{
+              backgroundColor: "orange",
+              color: "white",
+              marginLeft: "1em",
+            }}
             size="large"
           >
-            <Link to="/new-account" style={{ color: "white" }}>
+            <Link to="/signup" style={{ color: "white" }}>
               Sign Up
             </Link>
           </Button>
