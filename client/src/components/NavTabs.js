@@ -14,7 +14,7 @@ export default function NavTabs() {
       return (
         <ul className="flex-row">
           {/* this is not using the Link component to logout or user and then refresh the application to the start */}
-          <a href="/" onClick={() => Auth.logout()}>
+          <a href="/" onClick={() => Auth.logout()} style={{ color: "white" }}>
             Logout
           </a>
         </ul>
@@ -22,7 +22,9 @@ export default function NavTabs() {
     } else {
       return (
         <ul className="flex-row">
-          <Link to="/login">Login</Link>
+          <Link to="/login" style={{ color: "white" }}>
+            Login
+          </Link>
         </ul>
       );
     }
@@ -70,9 +72,9 @@ export default function NavTabs() {
         />
       </Menu.Menu>
       {showNavigation()}
-      <a class="item">
-        <i class="bars icon" name="Hamburger" id="Hamburger" />
-      </a>
+      <button className="item hide-on-desktop" type="button">
+        <i className="bars icon" name="Hamburger" id="Hamburger" />
+      </button>
     </Menu>
   );
 }
