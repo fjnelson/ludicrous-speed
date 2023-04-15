@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import registerServiceWorker from '.sw.js';
 
 const styleLink = document.createElement("link");
 styleLink.rel = "stylesheet";
@@ -22,3 +23,5 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+// Call registerSW method
+registerSW();
