@@ -1,11 +1,11 @@
 import React from "react";
-import { Grid, Button } from "semantic-ui-react";
+// import { Grid, Button } from "semantic-ui-react";
 import hellostranger4 from "../images/hellostranger-04.jpg";
-import { NavLink } from "react-router-dom";
-import { useState } from "react";
+// import { NavLink } from "react-router-dom";
+// import { useState } from "react";
 
 export default function Home() {
-  const [setShowNav] = useState(false);
+  // const [setShowNav] = useState(false);
   return (
     <body style={{ backgroundColor: "#25495f" }}>
       <div style={{ height: "100vh" }}>

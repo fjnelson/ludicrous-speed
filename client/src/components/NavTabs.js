@@ -13,20 +13,16 @@ export default function NavTabs() {
     if (Auth.loggedIn()) {
       return (
         <ul className="flex-row">
-  
-            {/* this is not using the Link component to logout or user and then refresh the application to the start */}
-            <a href="/" onClick={() => Auth.logout()}>
-              Logout
-            </a>
-
+          {/* this is not using the Link component to logout or user and then refresh the application to the start */}
+          <a href="/" onClick={() => Auth.logout()}>
+            Logout
+          </a>
         </ul>
       );
     } else {
       return (
         <ul className="flex-row">
-
-            <Link to="/login">Login</Link>
-
+          <Link to="/login">Login</Link>
         </ul>
       );
     }
@@ -66,25 +62,16 @@ export default function NavTabs() {
           active={location.pathname === "/account"}
         />
         <Menu.Item
-        as={Link}
-        to="/AnonymousPost"
-        name="AP"
-        active={location.pathname === "/AnonymousPost"}
-        id="AP"
-      />
-      </Menu.Menu>
-      <Menu.Item
-        as={Link}
-        to="/login"
-        name="Login"
-        active={location.pathname === "/login"}
-        id="login"
-      />
-      <a class="item">
-        <i class="bars icon" 
-        name="Hamburger" 
-        id="Hamburger" 
+          as={Link}
+          to="/AnonymousPost"
+          name="AP"
+          active={location.pathname === "/AnonymousPost"}
+          id="AP"
         />
+      </Menu.Menu>
+      {showNavigation()}
+      <a class="item">
+        <i class="bars icon" name="Hamburger" id="Hamburger" />
       </a>
     </Menu>
   );
