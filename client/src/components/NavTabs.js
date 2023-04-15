@@ -3,6 +3,7 @@ import { Menu } from "semantic-ui-react";
 import { Link, useLocation } from "react-router-dom";
 import HandYellow from "./images/Hand-yellow.png";
 import Auth from "../utils/auth";
+import "../App.css";
 
 export default function NavTabs() {
   const location = useLocation();
@@ -64,8 +65,27 @@ export default function NavTabs() {
           name="Explore"
           active={location.pathname === "/account"}
         />
+        <Menu.Item
+        as={Link}
+        to="/AnonymousPost"
+        name="AP"
+        active={location.pathname === "/AnonymousPost"}
+        id="AP"
+      />
       </Menu.Menu>
-      <Menu.Item /> {showNavigation()}
+      <Menu.Item
+        as={Link}
+        to="/login"
+        name="Login"
+        active={location.pathname === "/login"}
+        id="login"
+      />
+      <a class="item">
+        <i class="bars icon" 
+        name="Hamburger" 
+        id="Hamburger" 
+        />
+      </a>
     </Menu>
   );
 }
