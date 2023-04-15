@@ -7,6 +7,12 @@ const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 
 function Footer() {
   const footerTextStyle = {
+  position: "fixed",
+  bottom: "0",
+  left: "0",
+  width: "100%",
+  padding: "1rem",
+
     color: "blue",
     fontSize: "14px",
     textAlign: "center",
@@ -15,7 +21,7 @@ function Footer() {
 
   return (
 		// <footer className="footer-bottom">
-		<footer className="fixed-bottom">
+		<footer>
 			<Elements stripe={stripePromise}>
 				<DonateButton />
 			</Elements>
