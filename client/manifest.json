@@ -1,7 +1,7 @@
 {
     "short_name": "HelloStranger",
     "name": "Hello Stranger Manifest",
-    "description": "Codebase correction that follows accessibility standards so that the site is optimized for search engines",
+    "description": "Connect with strangers through storytelling",
     "icons": [
       {
         "src": "./images/hellostranger-04-96x96.jpg",
