@@ -2,6 +2,7 @@ import React from "react";
 import { Menu } from "semantic-ui-react";
 import { Link, useLocation } from "react-router-dom";
 import HandYellow from "./images/Hand-yellow.png";
+import "../App.css";
 
 export default function NavTabs() {
   const location = useLocation();
@@ -19,7 +20,7 @@ export default function NavTabs() {
       }}
     >
       <Menu.Item header>
-      <img src={HandYellow} alt="Hello Stranger" />
+        <img src={HandYellow} alt="Hello Stranger" />
       </Menu.Item>
       <Menu.Menu id="menu-items">
         <Menu.Item
@@ -40,6 +41,13 @@ export default function NavTabs() {
           name="User Accounts"
           active={location.pathname === "/account"}
         />
+        <Menu.Item
+        as={Link}
+        to="/AnonymousPost"
+        name="AP"
+        active={location.pathname === "/AnonymousPost"}
+        id="AP"
+      />
       </Menu.Menu>
       <Menu.Item
         as={Link}
@@ -48,6 +56,12 @@ export default function NavTabs() {
         active={location.pathname === "/login"}
         id="login"
       />
+      <a class="item">
+        <i class="bars icon" 
+        name="Hamburger" 
+        id="Hamburger" 
+        />
+      </a>
     </Menu>
   );
 }
