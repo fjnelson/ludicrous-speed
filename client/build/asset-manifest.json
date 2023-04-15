@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/ludicrous-speed/static/css/main.eb127c3c.css",
+    "main.js": "/ludicrous-speed/static/js/main.ceb5060c.js",
+    "static/js/787.afb2bc80.chunk.js": "/ludicrous-speed/static/js/787.afb2bc80.chunk.js",
+    "static/media/hellostranger-04.jpg": "/ludicrous-speed/static/media/hellostranger-04.97959dae923260b55f3c.jpg",
+    "static/media/Hand-yellow.png": "/ludicrous-speed/static/media/Hand-yellow.5d676cc4941883cdff4b.png",
+    "static/media/slick.svg": "/ludicrous-speed/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/ludicrous-speed/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/ludicrous-speed/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/ludicrous-speed/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/ludicrous-speed/index.html",
+    "main.eb127c3c.css.map": "/ludicrous-speed/static/css/main.eb127c3c.css.map",
+    "main.ceb5060c.js.map": "/ludicrous-speed/static/js/main.ceb5060c.js.map",
+    "787.afb2bc80.chunk.js.map": "/ludicrous-speed/static/js/787.afb2bc80.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eb127c3c.css",
+    "static/js/main.ceb5060c.js"
+  ]
+}
