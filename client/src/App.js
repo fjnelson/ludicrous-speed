@@ -80,7 +80,25 @@ function App() {
         <Footer stripePromise={stripePromise} />
       </Elements>
     </ApolloProvider>
-  );
-}
+  )
+  
+  // Register service workers 
+  const registerServiceWorker = async () => {
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/serviceWorker.js')
+          .then(registration => {
+            console.log('SW Reg:', registration);
+          })
+          .catch (err => {
+            console.log('SW Reg:', err);
+          })      
+      }
+    }
+  }
+  
+  
+
+};
 
 export default App;

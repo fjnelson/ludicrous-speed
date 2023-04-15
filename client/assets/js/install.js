@@ -2,16 +2,15 @@ const installBtn = document.getElementById('installBtn');
 const textHeader = document.getElementById('textHeader');
 
 // Creates install prompt 
-window.addEventListener("beforeinstallprompt", (e) => {
-  console.log(e.platforms); // e.g., ["web", "android", "windows"]
-  e.userChoice.then((choiceResult) => {
-    console.log(choiceResult.outcome); 
-  }, handleError);
-});
-
 window.addEventListener('beforeinstallprompt', (event) => {
   console.log(event.platforms);
+  event.userChoice.then((choiceResult) => {
+    console.log(choiceResult.outcome);
+  }
+  )
+
   event.preventDefault();
+
   installBtn.style.visibility = 'visible';
   textHeader.textContent = 'Install Hello Stranger Today!';
 
