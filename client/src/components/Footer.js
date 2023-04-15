@@ -14,13 +14,14 @@ function Footer() {
   };
 
   return (
-    <footer className="footer-bottom">
-      <Elements stripe={stripePromise}>
-        <DonateButton />
-      </Elements>
-      <p style={footerTextStyle}>2023 Team Falcon &trade;</p>
-    </footer>
-  );
+		// <footer className="footer-bottom">
+		<footer className="fixed-bottom">
+			<Elements stripe={stripePromise}>
+				<DonateButton />
+			</Elements>
+			<p style={footerTextStyle}>2023 Team Falcon &trade;</p>
+		</footer>
+	);
 }
 
 export default Footer;

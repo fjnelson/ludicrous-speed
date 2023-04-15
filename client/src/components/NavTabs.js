@@ -37,7 +37,7 @@ export default function NavTabs() {
         <Menu.Item
           as={Link}
           to="/account"
-          name="User Accounts"
+          name="Explore"
           active={location.pathname === "/account"}
         />
       </Menu.Menu>
