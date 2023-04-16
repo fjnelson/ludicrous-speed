@@ -1,0 +1,28 @@
+.ui.menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+#menu-items {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+}
+
+#menu-items > *:not(:last-child) {
+  margin-right: 1em;
+}
+
+#login {
+  margin-right: 1em;
+}
+
+.slick-slider {
+  width: 20vw;
+}
+
+.Hamburger {
+  background-color: red;
+}
