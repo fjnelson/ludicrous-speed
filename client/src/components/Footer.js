@@ -22,34 +22,50 @@ function Copyright() {
 
 function Footer() {
 	return (
-		<div style={{ backgroundColor: "#255f85", color: "black" }}>
-			<footer>
-				<Segment vertical style={{ padding: "0em 0em" }}>
-					<Container>
-						<Grid divided stackable>
-							<Grid.Row>
-								<Grid.Column width={5}>
-									<Header as="h4" content="About" />
-									<List link>
-										<List.Item as="a">Contact Us</List.Item>
-										<List.Item>
-											<Copyright />
-										</List.Item>
-									</List>
-								</Grid.Column>
-								<Grid.Column width={5}>
-									<Header as="h4">Donate to fund this site!</Header>
-									<Elements stripe={stripePromise}>
-										<DonateButton />
-									</Elements>
-								</Grid.Column>
-							</Grid.Row>
-						</Grid>
-						<Divider section />
-					</Container>
-				</Segment>
-			</footer>
-		</div>
+		<footer
+			style={{
+				// position: "fixed",
+				left: "0",
+				bottom: "0",
+				width: "100%",
+				border: "none",
+				backgroundColor: "#255f85",
+				color: "black",
+				// color: 'white',
+				// padding: '15px 32px',
+				// textAlign: 'center',
+				// textDecoration: 'none',
+				// display: 'inline-block',
+				// fontSize: '16px',
+				// margin: '4px 2px',
+				// cursor: 'pointer'
+			}}>
+			>
+			<Segment vertical style={{ padding: "0em 0em" }}>
+				<Container>
+					<Grid divided stackable>
+						<Grid.Row>
+							<Grid.Column width={5}>
+								<Header as="h4" content="About" />
+								<List link>
+									<List.Item as="a">Contact Us</List.Item>
+									<List.Item>
+										<Copyright />
+									</List.Item>
+								</List>
+							</Grid.Column>
+							<Grid.Column width={5}>
+								<Header as="h4">Donate to fund this site!</Header>
+								<Elements stripe={stripePromise}>
+									<DonateButton />
+								</Elements>
+							</Grid.Column>
+						</Grid.Row>
+					</Grid>
+					<Divider section />
+				</Container>
+			</Segment>
+		</footer>
 	);
 }
 
