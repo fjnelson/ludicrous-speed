@@ -1,0 +1,32 @@
+{
+    "short_name": "HelloStranger",
+    "name": "Hello Stranger Manifest",
+    "description": "Connect with strangers through storytelling",
+    "icons": [
+      {
+        "src": "./images/hellostranger-04-96x96.jpg",
+        "type": "image/jpeg",
+        "sizes": "96x96"
+      },
+      {
+        "src": "./images/hellostranger-04-128x128.jpg",
+        "type": "image/jpeg",
+        "sizes": "128x128"
+      },
+      {
+        "src": "./images/hellostranger-04-192x192.jpg",
+        "type": "image/jpeg",
+        "sizes": "192x192"
+      }
+    ],
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#2196f3",
+    "permissions": [
+      "geolocation",
+      "notifications",
+      "camera",
+      "microphone"
+    ]
+  }
