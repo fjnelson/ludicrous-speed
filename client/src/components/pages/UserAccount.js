@@ -25,6 +25,8 @@ const SimpleSlider = () => {
     autoplay: true,
     autoplaySpeed: 4000,
   };
+  const { loading, data } = useQuery(QUERY_THOUGHTS);
+  const thoughts = data?.thoughts || [];
 
   const [selectedAuthor, setSelectedAuthor] = useState("");
   const [likes, setLikes] = useState({});
