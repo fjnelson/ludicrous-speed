@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "semantic-ui-react";
+import { Container, Sidebar } from "semantic-ui-react";
 import { Route, Routes } from "react-router-dom";
 
 // import NavTabs from './NavTabs';
@@ -8,6 +8,7 @@ import CreatePost from "./pages/CreatePost";
 import UserAccount from "./pages/UserAccount";
 import LogIn from "./pages/LogIn";
 import Signup from './pages/Signup';
+import AP from "./pages/AnonymousPost"
 
 function Main({ currentPage, handlePageChange }) {
   return (
@@ -20,6 +21,7 @@ function Main({ currentPage, handlePageChange }) {
           <Route path="/user-account" element={<UserAccount />} />
           <Route path="/login" element={<LogIn />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/AnonymousPost" element={<AP />} />
         </Routes>
       </Container>
     </div>
