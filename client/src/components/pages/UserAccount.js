@@ -9,79 +9,10 @@ import { useState } from "react";
 import ThoughtList from '../components/ThoughtList';
 import ThoughtForm from '../components/ThoughtForm';
 
-import { QUERY_THOUGHTS } from '../utils/queries';
+import { QUERY_ALL_POSTS } from '../utils/queries';
 
 
-const friendOptions = [
-  {
-    key: "Jenny Hess",
-    text: "Jenny Hess",
-    value: "Jenny Hess",
-    posts: [
-      {
-        postText:
-          "I just finished reading an amazing book on React that really expanded my understanding of the framework. The author had a clear and concise writing style that made even the most complex topics easy to understand. I can't wait to put what I learned into practice on my next project!",
-        postAuthor: "Jenny Hess",
-      },
-      {
-        postText:
-          "Last weekend, I went on a challenging hike in the mountains with some friends. We were rewarded with breathtaking views at the summit and the sense of accomplishment that comes with pushing ourselves physically. It was a great reminder that sometimes the best things in life require effort and perseverance.",
-        postAuthor: "Jenny Hess",
-      },
-    ],
-  },
-  {
-    key: "Elliot Fu",
-    text: "Elliot Fu",
-    value: "Elliot Fu",
-    posts: [
-      {
-        postText:
-          "I'm currently working on a new feature for our app that I'm really excited about. It's been challenging, but I'm learning a lot and feel like the end result will be a huge improvement over our current version. I love the feeling of making progress on a project and can't wait to see it come to life!",
-        postAuthor: "Elliot Fu",
-      },
-      {
-        postText:
-          "Last weekend, I ran my first marathon and it was an amazing experience! The training was tough, but I felt strong and focused on race day. Crossing the finish line was a huge accomplishment and reminded me that anything is possible with hard work and determination.",
-        postAuthor: "Elliot Fu",
-      },
-    ],
-  },
-  {
-    key: "Stevie Feliciano",
-    text: "Stevie Feliciano",
-    value: "Stevie Feliciano",
-    posts: [
-      {
-        postText:
-          "I recently tried a new recipe for chicken curry that turned out absolutely delicious! It was a bit spicy, but had so many complex flavors that blended together perfectly. Cooking is such a creative and rewarding activity for me, and I love discovering new recipes to try out.",
-        postAuthor: "Stevie Feliciano",
-      },
-      {
-        postText:
-          "Over the weekend, I spent the day at the beach with some of my closest friends. We swam, played beach volleyball, and had a great time soaking up the sun. Being near the ocean always puts me in a relaxed and peaceful state of mind, and spending time with friends just made it even better.",
-        postAuthor: "Stevie Feliciano",
-      },
-    ],
-  },
-  {
-    key: "Christian",
-    text: "Christian",
-    value: "Christian",
-    posts: [
-      {
-        postText:
-          "I just started learning Python and I'm really enjoying it so far! It's a powerful language that can do so many things, and I'm excited to see what I'll be able to create once I become more proficient. If anyone has any tips or resources to share, I'm all ears!",
-        postAuthor: "Christian",
-      },
-      {
-        postText:
-          "Today, I finally got around to organizing my closet and it feels amazing! It's such a small thing, but having a clean and tidy space really does wonders for my mental clarity and productivity. Now, onto the rest of the apartment...",
-        postAuthor: "Christian",
-      },
-    ],
-  },
-];
+
 
 const SimpleSlider = () => {
   const settings = {
