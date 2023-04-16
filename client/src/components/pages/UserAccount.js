@@ -5,6 +5,13 @@ import "slick-carousel/slick/slick-theme.css";
 import { Dropdown, Card, Icon, Button } from "semantic-ui-react";
 import { useState } from "react";
 
+
+import ThoughtList from '../components/ThoughtList';
+import ThoughtForm from '../components/ThoughtForm';
+
+import { QUERY_THOUGHTS } from '../utils/queries';
+
+
 const friendOptions = [
   {
     key: "Jenny Hess",
