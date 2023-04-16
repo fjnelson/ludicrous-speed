@@ -6,17 +6,17 @@ import Auth from "../utils/auth";
 
 export default function NavTabs() {
   const location = useLocation();
-  console.log(location);
+  // console.log(location);
 
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
         <ul className="flex-row">
-  
-            {/* this is not using the Link component to logout or user and then refresh the application to the start */}
-            <a href="/" onClick={() => Auth.logout()}>
-              Logout
-            </a>
+
+          {/* this is not using the Link component to logout or user and then refresh the application to the start */}
+          <a href="/" onClick={() => Auth.logout()}>
+            Logout
+          </a>
 
         </ul>
       );
@@ -24,7 +24,7 @@ export default function NavTabs() {
       return (
         <ul className="flex-row">
 
-            <Link to="/login">Login</Link>
+          <Link to="/login">Login</Link>
 
         </ul>
       );
