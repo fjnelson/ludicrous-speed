@@ -21,6 +21,7 @@ window.addEventListener('beforeinstallprompt', (event) => {
   //installBtn.style.visibility = 'visible';
  //textHeader.textContent = 'Install Hello Stranger Today!';
 
+ // Add event listener, 'click' to install 
   installBtn.addEventListener('click', () => {
     event.prompt();
     installBtn.setAttribute('disabled', true);
@@ -28,6 +29,7 @@ window.addEventListener('beforeinstallprompt', (event) => {
   });
 });
 
+// Confirm app has been installed
 window.addEventListener('appinstalled', (event) => {
   textHeader.textContent = 'Hello Stranger!';
   console.log('Hello is installed', event);
