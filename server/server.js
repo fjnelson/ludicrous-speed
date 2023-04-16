@@ -24,21 +24,31 @@ const startApolloServer = async () => {
 
   await server.start();
   server.applyMiddleware({ app, path: '/graphql' });
-
-  db.once('open', () => {
-    app.listen(PORT, () => {
-      console.log(`API server running on port ${PORT}!`);
-      console.log(`Use GraphQL at http://localhost:${PORT}/graphql`);
-    });
-  });
 };
 
 startApolloServer();
 
-// Set up the server to listen on the Heroku port
-if (process.env.NODE_ENV === 'production') {
-  app.listen(PORT, () => {
+// This code is for local
+// db.once('open', () => {
+//   app.listen(PORT, () => {
+//     console.log(`API server running on port ${PORT}!`);
+//     console.log(`Use GraphQL at http://localhost:${PORT}/graphql`);
+//   });
+// });
+
+// This code is for Heroku
+// if (process.env.NODE_ENV === 'production') {
+//   app.listen(PORT, () => {
+//     console.log(`API server running on port ${PORT}!`);
+//     console.log(`Use GraphQL at http://localhost:${PORT}/graphql`);
+//   });
+// }
+
+db.once('open', () => {
+  const server = app.listen(PORT, () => {
     console.log(`API server running on port ${PORT}!`);
     console.log(`Use GraphQL at http://localhost:${PORT}/graphql`);
   });
-}
+
+  process.env.NODE_ENV === 'production' ? startApolloServer() : null;
+});

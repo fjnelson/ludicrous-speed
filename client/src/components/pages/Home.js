@@ -11,17 +11,11 @@ export default function Home() {
       <div style={{ height: "100vh" }}>
         <div class="ui segment" style={{ backgroundColor: "#25495f" }}>
           <img
-            className="ui centered large image"
+            class="ui centered large image"
             src={hellostranger4}
             alt="Hello Stranger"
           />
-          <p
-            style={{
-              fontSize: "2em",
-              color: "#FFC857",
-              textAlign: "center",
-            }}
-          >
+          <p style={{ fontSize: "2em", color: "#FFC857", textAlign: "center" }}>
             “If you see someone without a smile, give them one of yours.” -
             Polly Darton
           </p>
@@ -44,7 +38,7 @@ export default function Home() {
             heard. We can't wait to share them with you!
           </p>
         </div>
-        {/*<div class="two ui buttons">
+    {/*<div class="two ui buttons">
           <Button>
           <NavLink
             activeclassname="CreatPost"
