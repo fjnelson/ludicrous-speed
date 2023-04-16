@@ -40,7 +40,6 @@ function Footer() {
 				// margin: '4px 2px',
 				// cursor: 'pointer'
 			}}>
-			>
 			<Segment vertical style={{ padding: "0em 0em" }}>
 				<Container>
 					<Grid divided stackable>
