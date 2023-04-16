@@ -1,5 +1,6 @@
-const { Post } = require('../models');
-const { User } = require('../models');
+const { Post, User  } = require('../models');
+const { signToken } = require('../utils/auth');
+const { AuthenticationError } = require('apollo-server-express');
 const resolvers = {
   Query: {
     posts: async () => {
@@ -19,6 +20,29 @@ const resolvers = {
     },
   },
   Mutation: {
+    login: async (parent, { email, password }) => {
+      const user = await User.findOne({ email });
+
+      if (!user) {
+        throw new AuthenticationError('Incorrect credentials');
+      }
+
+      const correctPw = await user.isCorrectPassword(password);
+
+      if (!correctPw) {
+        throw new AuthenticationError('Incorrect credentials');
+      }
+
+      const token = signToken(user);
+
+      return { token, user };
+    },
+    addUser: async (parent, args) => {
+      const user = await User.create(args);
+      const token = signToken(user);
+
+      return { token, user };
+    },
     addPost: async (parent, { postText, postAuthor }) => {
       const post = new Post({ postText, postAuthor, createdAt: new Date().toISOString() });
       await post.save();
@@ -37,7 +61,7 @@ const resolvers = {
       );
       return post;
     },
-    removeComment: async (parent, { postId, commentId }) => {
+    removeComment: async (parent, { postId, comnmentId }) => {
       const post = await Post.findByIdAndUpdate(
         postId,
         { $pull: { comments: { _id: commentId } } },
@@ -45,6 +69,7 @@ const resolvers = {
       );
       return post;
     },
+
   },
   Post: {
     comments: (parent) => parent.comments.sort((a, b) => b.createdAt.localeCompare(a.createdAt)),
@@ -52,3 +77,5 @@ const resolvers = {
 };
 
 module.exports = resolvers;
+
+

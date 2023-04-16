@@ -16,9 +16,6 @@
     "seed": "cd server && npm run seed",
     "build": "cd client && npm run build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.3.0"
   },
@@ -39,5 +36,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-}
+  }
 }
