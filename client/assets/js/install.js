@@ -2,21 +2,19 @@ const installBtn = document.getElementById('installBtn');
 const textHeader = document.getElementById('textHeader');
 
 let deferredPrompt;
-// Creates install prompt 
+// Creates install feature and prompt 
 window.addEventListener('beforeinstallprompt', (event) => {
-  console.log(event.platforms);
-  event.userChoice.then((choiceResult) => {
-    console.log(choiceResult.outcome);
-  }
-  )
-
   event.preventDefault();
+
+  deferredPrompt = event;
   
+  // showInAppInstallPromotion();
+
   const installButton = document.getElementById('install-button');
   installButton.classList.add('show'); 
 
-  installBtn.style.visibility = 'visible';
-  textHeader.textContent = 'Install Hello Stranger Today!';
+  //installBtn.style.visibility = 'visible';
+ //textHeader.textContent = 'Install Hello Stranger Today!';
 
   installBtn.addEventListener('click', () => {
     event.prompt();
