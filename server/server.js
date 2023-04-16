@@ -34,3 +34,11 @@ const startApolloServer = async () => {
 };
 
 startApolloServer();
+
+// Set up the server to listen on the Heroku port
+if (process.env.NODE_ENV === 'production') {
+  app.listen(PORT, () => {
+    console.log(`API server running on port ${PORT}!`);
+    console.log(`Use GraphQL at http://localhost:${PORT}/graphql`);
+  });
+}
