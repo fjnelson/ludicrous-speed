@@ -1,5 +1,7 @@
+
+
 // Define the cache name and app assets to cache
-const CACHE_NAME = 'v1';
+const cacheName = 'hello-data';
 // Assets to cache
 const urlsToCache = [
   '/',
@@ -14,7 +16,7 @@ const urlsToCache = [
 self.addEventListener('install', event => {
   event.waitUntil(
     caches
-      .open(v1)
+      .open(hello-data)
       .then(cache => 
         cache.addAll(
           urlsToCache))

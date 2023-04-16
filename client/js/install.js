@@ -13,14 +13,6 @@ window.addEventListener('beforeinstallprompt', (event) => {
   const installButton = document.getElementById('install-button');
   installButton.classList.add('show'); 
 
-  //const installButton = document.getElementById('install-button');
-  //installButton.addEventListener('click', (event) => {
-  // Show the install prompt
-  //deferredPrompt.prompt();
-
-  //installBtn.style.visibility = 'visible';
- //textHeader.textContent = 'Install Hello Stranger Today!';
-
  // Add event listener, 'click' to install 
   installBtn.addEventListener('click', () => {
     event.prompt();
