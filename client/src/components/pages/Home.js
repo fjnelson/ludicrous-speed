@@ -23,14 +23,14 @@ export default function Home() {
             }}
           >
             “If you see someone without a smile, give them one of yours.” -
-            Dolly Parton
+            Polly Darton
           </p>
           <p
             style={{
               fontSize: "2em",
               color: "#FFC857",
               textAlign: "center",
-              marginTop: "20px",
+              marginTop: "30px",
             }}
           >
             Welcome to Hello Stranger! Just like a traditional library, we are a
