@@ -17,7 +17,7 @@ export default function Home() {
           />
           <p style={{ fontSize: "2em", color: "#FFC857", textAlign: "center" }}>
             “If you see someone without a smile, give them one of yours.” -
-            Polly Darton
+            Dolly Parton
           </p>
           <p
             style={{
@@ -38,7 +38,7 @@ export default function Home() {
             heard. We can't wait to share them with you!
           </p>
         </div>
-    {/*<div class="two ui buttons">
+        {/*<div class="two ui buttons">
           <Button>
           <NavLink
             activeclassname="CreatPost"
