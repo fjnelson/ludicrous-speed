@@ -1,73 +1,105 @@
-import React, { useState } from 'react';
-// import semantic cridder 20230415181453
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 import { Form, Button, Grid, Header, Segment } from "semantic-ui-react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import { useMutation } from "@apollo/client";
+import { ADD_POST } from "../../utils/mutations";
+import { QUERY_POSTS } from "../../utils/queries";
+
+import Auth from "../../utils/auth";
 
 export default function CreatePost() {
-	const [title, setTitle] = useState("");
-	const [description, setDescription] = useState("");
-	const [content, setContent] = useState("");
-	const navigate = useNavigate();
+  const [postText, setPostText] = useState("");
 
-	const handleTitleChange = (event) => setTitle(event.target.value);
-	const handleDescriptionChange = (event) => setDescription(event.target.value);
-	const handleContentChange = (event) => setContent(event.target.value);
+  const [characterCount, setCharacterCount] = useState(0);
 
-	const handleSubmit = (event) => {
-		event.preventDefault();
-		console.log("Title:", title);
-		console.log("Description:", description);
-		console.log("Content:", content);
-		// Add your code to submit the form data to the server here
-		// After the data is submitted, navigate to the home page
-		navigate("/");
-	};
+  const [addPost, { error }] = useMutation(ADD_POST, {
+    update(cache, { data: { addPost } }) {
+      try {
+        const { posts } = cache.readQuery({ query: QUERY_POSTS });
 
-	// cridder 20230415183411
-	return (
-		<Grid textAlign="center" style={{ height: "100vh" }}>
-			<Grid.Column style={{ maxWidth: 800 }}>
-				<Header as="h1" color="orange" textAlign="center">
-					Create a Post!
-				</Header>
-				<Form size="large" onSubmit={handleSubmit}>
-					<Segment stacked>
-						<Form.Field>
-							<label>Title:</label>
-							<input type="text" value={title} onChange={handleTitleChange} />
-						</Form.Field>
+        cache.writeQuery({
+          query: QUERY_POSTS,
+          data: { posts: [addPost, ...posts] },
+        });
+      } catch (e) {
+        console.error(e);
+      }
+    },
+  });
 
-						<Form.Field>
-							<label>Description:</label>
-							<input
-								type="text"
-								value={description}
-								onChange={handleDescriptionChange}
-							/>
-						</Form.Field>
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
 
-						<Form.Field>
-							<label>Content:</label>
-							<textarea
-								style={{ width: "100%" }}
-								// overflow="hidden"
-								resize="both"
-								// rows="5"
-								value={content}
-								onChange={handleContentChange}>
-								contenteditable
-							</textarea>
-						</Form.Field>
-						{/* <Button type="submit">Submit</Button> */}
-						<Button
-							style={{ backgroundColor: "orange", color: "white" }}
-							size="large"
-							type="submit">
-							Submit
-						</Button>
-					</Segment>
-				</Form>
-			</Grid.Column>
-		</Grid>
-	);
+    try {
+      const { data } = await addPost({
+        variables: {
+          postText,
+          postAuthor: Auth.getProfile().data.username,
+        },
+      });
+
+      setPostText("");
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    if (name === "postText" && value.length <= 280) {
+      setPostText(value);
+      setCharacterCount(value.length);
+    }
+    // navigate('/');
+  };
+
+  return (
+    <Grid textAlign="center" style={{ height: "100vh" }}>
+      <Grid.Column style={{ maxWidth: 800 }}>
+        <Header as="h1" color="orange" textAlign="center">
+          Create a Post!
+        </Header>
+        {Auth.loggedIn() ? (
+          <>
+            <p
+              className={`m-0 ${
+                characterCount === 280 || error ? "text-danger" : ""
+              }`}
+            >
+              Character Count: {characterCount}/280
+            </p>
+            <Form size="large" onSubmit={handleFormSubmit}>
+              <Segment stacked>
+                <Form.Field>
+                  <label>Content:</label>
+                  <textarea
+                    style={{ width: "100%" }}
+                    name="postText"
+                    resize="both"
+                    value={postText}
+                    onChange={handleChange}
+                  ></textarea>
+                </Form.Field>
+                <Button
+                  style={{ backgroundColor: "orange", color: "white" }}
+                  size="large"
+                  type="submit"
+                >
+                  Submit
+                </Button>
+              </Segment>
+            </Form>
+          </>
+        ) : (
+          <p>
+            You need to be logged in to share your thoughts. Please{" "}
+            <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
+          </p>
+        )}
+      </Grid.Column>
+    </Grid>
+  );
 }

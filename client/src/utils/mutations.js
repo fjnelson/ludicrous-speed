@@ -15,6 +15,18 @@ mutation Mutation($username: String!, $email: String!, $password: String!) {
   }
 }
 `;
+export const ADD_POST = gql`
+mutation Mutation($postText: String!, $postAuthor: String!) {
+  addPost(postText: $postText, postAuthor: $postAuthor) {
+    _id
+    postText
+    postAuthor
+    createdAt
+
+  }
+}
+`;
+
 
 
 export const LOGIN = gql`
