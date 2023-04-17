@@ -53,24 +53,32 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Deployed App
 
-- [ ] ADD DEPLOYED APP LINK
+Visit our app at [https://hello--stranger.herokuapp.com/](https://hello-stranger.herokuapp.com/)
 
 # Repository
 
-[HELLO STRANGER][1]
+Click [HELLO STRANGER](https://github.com/fjnelson/ludicrous-speed) repository.
 
 # Contributing
 
-Fork [HELLO STRANGER][1] and submit a pull request.
+Fork [HELLO STRANGER](https://github.com/fjnelson/ludicrous-speed) and submit a pull request.
 
 # Description
 
-- [ ] ADD A DESCRIPTION
+            Welcome to Hello Stranger! Just like a traditional library, we are a
+            place of knowledge and exploration. But instead of books, our
+            library is filled with human stories. Our goal is to break down
+            barriers and promote understanding by connecting you with
+            individuals who have unique experiences and perspectives. Whether
+            you're here to learn, grow, or just connect with others, we're
+            thrilled to have you as a part of our community. So come on in,
+            browse our "shelves", and discover the human stories waiting to be
+            heard. We can't wait to share them with you!
 
 # Screenshot
 
-- [ ] ADD A HOME PAGE SCREEN SHOT
-- [ ] ADD A CONTENT PAGE SCREEN SHOT
+![HELLO STRANGER](./client/src/components/images/home-page.JPG "application home page photo")
+![HELLO STRANGER](./client/src/components/images/content.JPG "application content photo")
 
 # License
 

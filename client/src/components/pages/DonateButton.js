@@ -8,8 +8,8 @@ function DonateButton() {
 		const { error } = await stripe.redirectToCheckout({
 			lineItems: [{ price: "price_1Mv4iDHBDh6WAzZIvNpKAAia", quantity: 1 }],
 			mode: "payment",
-			successUrl: "https://example.com/success",
-			cancelUrl: "https://example.com/cancel",
+			successUrl: "https://hello--stranger.herokuapp.com/",
+			cancelUrl: "https://hello--stranger.herokuapp.com/",
 		});
 
 		if (error) {
