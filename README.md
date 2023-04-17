@@ -53,7 +53,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Deployed App
 
-Visit our app at [https://hello-stranger.herokuapp.com/](https://hello-stranger.herokuapp.com/)
+Visit our app at [https://hello--stranger.herokuapp.com/](https://hello-stranger.herokuapp.com/)
 
 # Repository
 
