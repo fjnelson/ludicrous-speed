@@ -8,7 +8,8 @@ const urlsToCache = [
   '/app.js',
   '/images',
   '/index.html',
-  '/pages'
+  '/pages',
+  '/install.js',
 ];
 
 // Fetch and cache all data
